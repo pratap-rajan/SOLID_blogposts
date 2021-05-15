@@ -1,6 +1,9 @@
 from bs4 import BeautifulSoup
 from urllib.request import urlopen
+import ssl
 
+# To Mute the SSL Certificate Verification
+ssl._create_default_https_context = ssl._create_unverified_context
 
 def read_localfile(file):
     '''Read file'''
